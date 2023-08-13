@@ -14,11 +14,10 @@ public class Calculadora1 {
         double num1;
         double num2;
         double resultado;
-        double grados;
         
           
         do{
-               System.out.println("Bienvenido a la app calculadora \n\nSeleccione la opcion que desea usar:\n\n\t1. Suma\n\t2. Resta\n\t3. Multiplicación"
+             System.out.println("\n\nBienvenido a la app calculadora \n\nSeleccione la opcion que desea usar:\n\n\t1. Suma\n\t2. Resta\n\t3. Multiplicación"
              + "\n\t4. División\n\t5. Seno\n\t6. Coseno\n\t7. Tangente\n\t8. Raiz\n\t9. Potencia\n\t10. Porcentaje de IVA\n\t11. SALIR");
             opcion= p.nextInt();
         while(opcion<0 || opcion>11){
@@ -26,45 +25,41 @@ public class Calculadora1 {
              System.out.println("Bienvenido a la app calculadora \n\nSeleccione la opcion que desea usar:\n\n\t1. Suma\n\t2. Resta\n\t3. Multiplicación"
                 + "\n\t4. División\n\t5. Seno\n\t6. Coseno\n\t7. Tangente\n\t8. Raiz\n\t9. Potencia\n\t10. Porcentaje de IVA\n\t11. SALIR");
             opcion= p.nextInt();
-        };
+        }
             switch(opcion){
-                case 1 -> {
+                case 1: {
                     System.out.println("\nIngrese el primer valor que desea sumar:    ");
                     num1=p.nextDouble();
                     System.out.println("\nIngrese el segundo valor que desea sumar:    ");
                     num2=p.nextDouble();
                     resultado=num1+num2;
                     System.out.println("\n\nEl resultado de la suma de "+num1+" + " +num2+" = "+resultado);
-                    break;
                 }
-                case 2 -> {
+                case 2 : {
                     System.out.println("\nIngrese el primer valor que desea restar:    ");
                     num1=p.nextDouble();
                     System.out.println("\nIngrese el segundo valor que desea restar:    ");
                     num2=p.nextDouble();
                     resultado=num1-num2;
                     System.out.println("\n\nEl resultado de la resta de "+num1+" - " +num2+" = "+resultado);
-                    break;
                 }
-                case 3 -> {
+                case 3 : {
                     System.out.println("\nIngrese el primer valor que desea multiplicar:    ");
                     num1=p.nextDouble();
                     System.out.println("\nIngrese el segundo valor que desea multiplicar:    ");
                     num2=p.nextDouble();
                     resultado=num1*num2;
                     System.out.println("\n\nEl resultado de la multiplicación de "+num1+" x " +num2+" = "+resultado);
-                    break;
                 }
-                case 4 -> {
+                case 4 : {
                     System.out.println("\nIngrese el primer valor que desea dividir:    ");
                     num1=p.nextDouble();
                     System.out.println("\nIngrese el segundo valor que desea dividir:    ");
                     num2=p.nextDouble();
                     resultado=num1/num2;
                     System.out.println("\n\nEl resultado de la división de "+num1+" / " +num2+" = "+resultado);
-                    break;
                 }
-                case 5 -> {
+                case 5 : {
                     System.out.println("\nIngrese el angulo del que desea medir el seno:    ");
                     num1=p.nextDouble();
                     num2=Math.toRadians(num1);
@@ -72,13 +67,55 @@ public class Calculadora1 {
                     System.out.println("\n\nEl resultado de seno de "+num1+" = "+resultado);
                     break;
                 }
-                case 6->{
+                case 6 : {
                     System.out.println("\nIngrese el angulo del que desea medir el coseno:    ");
                     num1=p.nextDouble();
                     num2=Math.toRadians(num1);
                     resultado=cos(num2);
-                    System.out.println("\n\nEl resultado de seno de "+num1+" = "+resultado);
+                    System.out.println("\n\nEl resultado de coseno de "+num1+" = "+resultado);
                     break;
+                }
+                case 7 :{
+                    System.out.println("\nIngrese el angulo del que desea medir la tangente:    ");
+                    num1=p.nextDouble();
+                    num2=Math.toRadians(num1);
+                    resultado=tan(num2);
+                    System.out.println("\n\nEl resultado de la tangente de "+num1+" = "+resultado);
+                    break;
+                }
+                case 8 :{
+                    System.out.println("\nIngrese el numero del que desea conocer la raiz:    ");
+                    num1=p.nextDouble();
+                    System.out.println("\nIngrese la raiz que desea calcular:   ");
+                    num2=p.nextDouble();
+                    resultado=pow(num1,1/num2);
+                    System.out.println("\n\nEl resultado de la raiz "+num2+" de "+num1+" = "+resultado);
+                    break;
+                }
+                case 9:{
+                    System.out.println("\nIngrese el numero del que desea conocer la potencia:    ");
+                    num1=p.nextDouble();
+                    System.out.println("\nIngrese la potencia que desea calcular:   ");
+                    num2=p.nextDouble();
+                    resultado=pow(num1,num2);
+                    System.out.println("\n\nEl resultado de la potencia "+num2+" de "+num1+" = "+resultado);
+                    break;
+                }
+                case 10:{
+                    System.out.println("\nIngrese el numero del que desea conocer la potencia:    ");
+                    num1=p.nextDouble();
+                    System.out.println("\nIngrese la potencia que desea calcular:   ");
+                    num2=p.nextDouble();
+                    resultado=pow(num1,num2);
+                    System.out.println("\n\nEl resultado de la potencia "+num2+" de "+num1+" = "+resultado);
+                    break;
+                }
+                case 11:{
+                    System.out.println("\nGracias por usar la calculadora");
+                    break;
+                }
+                default :{
+                    System.out.println("\n\nOpcion no programada");
                 }
             }
         }while (opcion != 12);
