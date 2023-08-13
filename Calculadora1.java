@@ -73,7 +73,12 @@ public class Calculadora1 {
                     break;
                 }
                 case 6->{
-                    
+                    System.out.println("\nIngrese el angulo del que desea medir el coseno:    ");
+                    num1=p.nextDouble();
+                    num2=Math.toRadians(num1);
+                    resultado=cos(num2);
+                    System.out.println("\n\nEl resultado de seno de "+num1+" = "+resultado);
+                    break;
                 }
             }
         }while (opcion != 12);
