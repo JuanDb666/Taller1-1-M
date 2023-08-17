@@ -79,7 +79,7 @@ public class Calculadora1 {
                     System.out.println("\nIngrese el angulo del que desea medir el coseno:    ");
                     num1=p.nextDouble();
                     num2=Math.toRadians(num1);
-                    resultado=cos(num2);
+                    resultado=Math.cos(num2);
                     System.out.println("\n\nEl resultado de coseno de "+num1+" = "+resultado);
                     break;
                 }
@@ -88,11 +88,11 @@ public class Calculadora1 {
                     System.out.println("\nIngrese el angulo del que desea medir la tangente:    ");
                     num1=p.nextDouble();
                     num2=Math.toRadians(num1);
-                    r=cos(num2);
+                    r=Math.cos(num2);
                     if (num2 == 0){
                         System.out.println("\n\nTangente indeterminada ");
                     } else{
-                    resultado=tan(num2);
+                    resultado=Math.tan(num2);
                     System.out.println("\n\nEl resultado de la tangente de "+num1+" = "+resultado);
                     }
                     break;
