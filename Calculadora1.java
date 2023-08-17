@@ -34,6 +34,7 @@ public class Calculadora1 {
                     num2=p.nextDouble();
                     resultado=num1+num2;
                     System.out.println("\n\nEl resultado de la suma de "+num1+" + " +num2+" = "+resultado);
+                    break;
                 }
                 case 2 : {
                     System.out.println("\nIngrese el primer valor que desea restar:    ");
@@ -42,6 +43,7 @@ public class Calculadora1 {
                     num2=p.nextDouble();
                     resultado=num1-num2;
                     System.out.println("\n\nEl resultado de la resta de "+num1+" - " +num2+" = "+resultado);
+                    break;
                 }
                 case 3 : {
                     System.out.println("\nIngrese el primer valor que desea multiplicar:    ");
@@ -50,14 +52,20 @@ public class Calculadora1 {
                     num2=p.nextDouble();
                     resultado=num1*num2;
                     System.out.println("\n\nEl resultado de la multiplicación de "+num1+" x " +num2+" = "+resultado);
+                    break;
                 }
                 case 4 : {
                     System.out.println("\nIngrese el primer valor que desea dividir:    ");
                     num1=p.nextDouble();
                     System.out.println("\nIngrese el segundo valor que desea dividir:    ");
                     num2=p.nextDouble();
-                    resultado=num1/num2;
+                    if (num2 == 0){
+                        System.out.println("\n\nNo es posible realizar divisiones en 0 ");
+                    } else {
+                        resultado=num1/num2;
                     System.out.println("\n\nEl resultado de la división de "+num1+" / " +num2+" = "+resultado);
+                    }
+                    break;
                 }
                 case 5 : {
                     System.out.println("\nIngrese el angulo del que desea medir el seno:    ");
@@ -76,11 +84,17 @@ public class Calculadora1 {
                     break;
                 }
                 case 7 :{
+                    double r;
                     System.out.println("\nIngrese el angulo del que desea medir la tangente:    ");
                     num1=p.nextDouble();
                     num2=Math.toRadians(num1);
+                    r=cos(num2);
+                    if (num2 == 0){
+                        System.out.println("\n\nTangente indeterminada ");
+                    } else{
                     resultado=tan(num2);
                     System.out.println("\n\nEl resultado de la tangente de "+num1+" = "+resultado);
+                    }
                     break;
                 }
                 case 8 :{
@@ -88,6 +102,9 @@ public class Calculadora1 {
                     num1=p.nextDouble();
                     System.out.println("\nIngrese la raiz que desea calcular:   ");
                     num2=p.nextDouble();
+                    if(num2 < 0){
+                        System.out.println("\n\nRaiz negativa");
+                    }
                     resultado=pow(num1,1/num2);
                     System.out.println("\n\nEl resultado de la raiz "+num2+" de "+num1+" = "+resultado);
                     break;
@@ -102,12 +119,12 @@ public class Calculadora1 {
                     break;
                 }
                 case 10:{
-                    System.out.println("\nIngrese el numero del que desea conocer la potencia:    ");
+                    System.out.println("\nIngrese el valor del producto ");
                     num1=p.nextDouble();
-                    System.out.println("\nIngrese la potencia que desea calcular:   ");
+                    System.out.println("\nIngrese el valor del IVA  ");
                     num2=p.nextDouble();
-                    resultado=pow(num1,num2);
-                    System.out.println("\n\nEl resultado de la potencia "+num2+" de "+num1+" = "+resultado);
+                    resultado= num1 + (num2/100);
+                    System.out.println("\n\nEl valor es  "+resultado);
                     break;
                 }
                 case 11:{
@@ -118,6 +135,6 @@ public class Calculadora1 {
                     System.out.println("\n\nOpcion no programada");
                 }
             }
-        }while (opcion != 12);
+        }while (opcion != 11);
     }
 }
