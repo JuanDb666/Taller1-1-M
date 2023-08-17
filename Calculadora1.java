@@ -1,7 +1,6 @@
 
 package com.mycompany.calculadora1;
 
-import static com.mycompany.calculadora1.math.radiant;
 import static java.lang.Math.sin;
 import java.util.Scanner;
 
@@ -89,7 +88,7 @@ public class Calculadora1 {
                     num1=p.nextDouble();
                     num2=Math.toRadians(num1);
                     r=Math.cos(num2);
-                    if (num2 == 0){
+                    if (r == 0){
                         System.out.println("\n\nTangente indeterminada ");
                     } else{
                     resultado=Math.tan(num2);
@@ -102,8 +101,8 @@ public class Calculadora1 {
                     num1=p.nextDouble();
                     System.out.println("\nIngrese la raiz que desea calcular:   ");
                     num2=p.nextDouble();
-                    if(num2 < 0){
-                        System.out.println("\n\nRaiz negativa");
+                    if(num1 < 0){
+                        System.out.println("\n\nNo se pueden realizar raíces negativas");
                     }
                     resultado=pow(num1,1/num2);
                     System.out.println("\n\nEl resultado de la raiz "+num2+" de "+num1+" = "+resultado);
